@@ -8,6 +8,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
 
 public class MainActivity extends AppCompatActivity {
     private Button buttonSort;
@@ -18,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        AppCenter.start(getApplication(), "{B eko}", Analytics.class, Crashes.class);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

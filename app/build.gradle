@@ -2,6 +2,12 @@ plugins {
     id 'com.android.application'
 }
 
+dependencies {
+    def appCenterSdkVersion = '3.3.1'
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+}
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
